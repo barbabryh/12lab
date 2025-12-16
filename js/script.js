@@ -36,3 +36,18 @@ toggleBtn.addEventListener('click', () => {
     }
 });
 
+const maxPriceInput = document.getElementById('maxPrice');
+const tableRows = document.querySelectorAll('.menu-table tbody tr');
+
+maxPriceInput.addEventListener('input', () => {
+    const maxPrice = parseInt(maxPriceInput.value) || Infinity;
+
+    tableRows.forEach(row => {
+        const price = parseInt(row.children[3].textContent.replace(/\s/g, ''));
+        if (price <= maxPrice) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+});

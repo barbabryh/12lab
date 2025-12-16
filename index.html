@@ -25,6 +25,11 @@
 <main class="main-container">
     <section class="content">
         <h3>Основные блюда</h3>
+        <section class="filter">
+            <label for="maxPrice">Показать блюда дешевле, ₽:</label>
+            <input type="number" id="maxPrice" placeholder="Введите сумму">
+        </section>
+
         <table class="menu-table">
             <thead>
                 <tr>
@@ -40,7 +45,7 @@
                     <td>1</td>
                     <td>Стейк из лосося</td>
                     <td>Нежный стейк из норвежского лосося с овощами гриль</td>
-                    <td>1800</td>
+                    <td>1000</td>
                     <td><button class="add-btn">Добавить</button></td>
                 </tr>
                 <tr>
@@ -54,21 +59,21 @@
                     <td>3</td>
                     <td>Ризотто с трюфелем</td>
                     <td>Кремовое ризотто с белыми трюфелями и пармезаном</td>
-                    <td>1900</td>
+                    <td>3900</td>
                     <td><button class="add-btn">Добавить</button></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>Телячьи медальоны</td>
                     <td>Медальоны из телятины с грибным соусом и спаржей</td>
-                    <td>2500</td>
+                    <td>1500</td>
                     <td><button class="add-btn">Добавить</button></td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>Лазанья по-болоньски</td>
                     <td>Классическая лазанья с мясным соусом и моцареллой</td>
-                    <td>1600</td>
+                    <td>900</td>
                     <td><button class="add-btn">Добавить</button></td>
                 </tr>
             </tbody>
@@ -93,6 +98,7 @@
         
 
     </aside>
+    <button id="toggleSidebar">Показать акции</button>
     
 </main>
 
