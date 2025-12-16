@@ -3,58 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карточка профиля — Этап 3</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Ресторан "Сиреневый туман"</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="profile-card">
+<header class="header">
+    <h1>Ресторан "Сиреневый туман"</h1>
+    <h2>Сезонное меню</h2>
+    <nav class="menu-nav">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Меню</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <img id="avatar" src="images/avatar1.jpg" alt="Фото профиля">
+<main class="main-container">
+    <section class="content">
+        <h3>Основные блюда</h3>
+        <table class="menu-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Блюдо</th>
+                    <th>Описание</th>
+                    <th>Цена, ₽</th>
+                    <th>Добавить</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Стейк из лосося</td>
+                    <td>Нежный стейк из норвежского лосося с овощами гриль</td>
+                    <td>1800</td>
+                    <td><button class="add-btn">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Утиная грудка</td>
+                    <td>Утка конфи с апельсиновым соусом и картофельным пюре</td>
+                    <td>2200</td>
+                    <td><button class="add-btn">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ризотто с трюфелем</td>
+                    <td>Кремовое ризотто с белыми трюфелями и пармезаном</td>
+                    <td>1900</td>
+                    <td><button class="add-btn">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Телячьи медальоны</td>
+                    <td>Медальоны из телятины с грибным соусом и спаржей</td>
+                    <td>2500</td>
+                    <td><button class="add-btn">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Лазанья по-болоньски</td>
+                    <td>Классическая лазанья с мясным соусом и моцареллой</td>
+                    <td>1600</td>
+                    <td><button class="add-btn">Добавить</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align:right;"><strong>Итоговая сумма:</strong></td>
+                    <td id="total">0 ₽</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
 
-        <h2 id="username">Варвара</h2>
+    <aside class="sidebar">
+        <h3>Акции</h3>
+        <ul>
+            <li>Скидка 20% на бизнес-ланч</li>
+            <li>Бесплатное вино при заказе от 3000₽</li>
+            <li>Десерт в подарок ко дню рождения</li>
+        </ul>
+        <button id="toggleSidebar">Скрыть акции</button>
+    </aside>
+</main>
 
-      
-        <input type="text" id="nameInput" placeholder="Введите новое имя">
+<footer class="footer">
+    <p><strong>Ресторан "Сиреневый туман" © 2025</strong></p>
+</footer>
 
-        <p id="bio">Я студентка НИТУ МИСИС.</p>
-
-     
-        <button id="toggleBioBtn" title="Скрыть или показать биографию">
-            Скрыть/показать биографию
-        </button>
-
-        <button id="toggleHobbiesBtn" title="Показать или скрыть хобби">
-            Показать/скрыть хобби
-        </button>
-
-        <p>Лайки: <span id="likes">0</span></p>
-        <button id="likeBtn" title="Поставить лайк">Поставить лайк</button>
-
-        <button id="changePhotoBtn" title="Сменить фото профиля">
-            Сменить фото
-        </button>
-
-        <button id="resetBtn" title="Сброс имени и лайков">
-            Сбросить всё
-        </button>
-
-        <button id="themeBtn" title="Переключить тему (светлая/тёмная)">
-            Сменить тему
-        </button>
-
-        <div id="hobbies" class="hidden">
-            <h3>Мои хобби:</h3>
-            <ul>
-                <li>Сноуборд</li>
-                <li>Программирование</li>
-                <li>Походы</li>
-            </ul>
-        </div>
-
-    </div>
-
+<script src="js/script.js"></script>
 </body>
 </html>

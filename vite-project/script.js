@@ -1,69 +1,25 @@
-const username = document.querySelector("#username");
-const nameInput = document.querySelector("#nameInput");
+// Интерактив для кнопок "Добавить"
+const addButtons = document.querySelectorAll('.add-btn');
+const totalElem = document.getElementById('total');
+let totalSum = 0;
 
-const bio = document.querySelector("#bio");
-const toggleBioBtn = document.querySelector("#toggleBioBtn");
-
-const hobbies = document.querySelector("#hobbies");
-const toggleHobbiesBtn = document.querySelector("#toggleHobbiesBtn");
-
-const likeBtn = document.querySelector("#likeBtn");
-const likesSpan = document.querySelector("#likes");
-
-const themeBtn = document.querySelector("#themeBtn");
-
-const resetBtn = document.querySelector("#resetBtn");
-const changePhotoBtn = document.querySelector("#changePhotoBtn");
-const avatar = document.querySelector("#avatar");
-
-let likes = 0;
-let photoIndex = 1;
-
-nameInput.addEventListener("input", () => {
-    if (nameInput.value.trim() === "") {
-        username.textContent = "Имя не может быть пустым!";
-        username.style.color = "red";
-    } else {
-        username.style.color = "";
-        username.textContent = nameInput.value;
-    }
+addButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const row = e.target.closest('tr');
+        const price = parseInt(row.children[3].textContent);
+        totalSum += price;
+        totalElem.textContent = `${totalSum} ₽`;
+        row.classList.add('added');
+        button.disabled = true;
+        button.textContent = 'Добавлено';
+    });
 });
 
-toggleBioBtn.addEventListener("click", () => {
-    bio.classList.toggle("hidden");
+// Интерактив для сайдбара
+const toggleBtn = document.getElementById('toggleSidebar');
+const sidebar = document.querySelector('.sidebar');
+
+toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('hidden');
+    toggleBtn.textContent = sidebar.classList.contains('hidden') ? 'Показать акции' : 'Скрыть акции';
 });
-
-
-toggleHobbiesBtn.addEventListener("click", () => {
-    hobbies.classList.toggle("hidden");
-});
-
-likeBtn.addEventListener("click", () => {
-    likes++;
-    likesSpan.textContent = likes;
-});
-
-themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-});
-
-changePhotoBtn.addEventListener("click", () => {
-    if (avatar.src.includes("images/avatar.jpg")) {
-        avatar.src = "images/avatar1.jpg";
-    } else {
-        avatar.src = "images/avatar.jpg";
-    }
-});
-
-resetBtn.addEventListener("click", () => {
-    likes = 0;
-    likesSpan.textContent = 0;
-
-    username.textContent = "Варвара";
-    nameInput.value = "";
-
-    avatar.src = "avatar1.jpg";
-    photoIndex = 1;
-});
-
-
