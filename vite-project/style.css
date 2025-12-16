@@ -143,6 +143,10 @@ header, main, footer {
     border-radius: 10px;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* Адаптивность */
 @media (max-width: 900px) {
     .main-container {
