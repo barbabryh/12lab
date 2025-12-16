@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка профиля — Этап 3</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="profile-card">
+
+        <img id="avatar" src="images/avatar1.jpg" alt="Фото профиля">
+
+        <h2 id="username">Варвара</h2>
+
+      
+        <input type="text" id="nameInput" placeholder="Введите новое имя">
+
+        <p id="bio">Я студентка НИТУ МИСИС.</p>
+
+     
+        <button id="toggleBioBtn" title="Скрыть или показать биографию">
+            Скрыть/показать биографию
+        </button>
+
+        <button id="toggleHobbiesBtn" title="Показать или скрыть хобби">
+            Показать/скрыть хобби
+        </button>
+
+        <p>Лайки: <span id="likes">0</span></p>
+        <button id="likeBtn" title="Поставить лайк">Поставить лайк</button>
+
+        <button id="changePhotoBtn" title="Сменить фото профиля">
+            Сменить фото
+        </button>
+
+        <button id="resetBtn" title="Сброс имени и лайков">
+            Сбросить всё
+        </button>
+
+        <button id="themeBtn" title="Переключить тему (светлая/тёмная)">
+            Сменить тему
+        </button>
+
+        <div id="hobbies" class="hidden">
+            <h3>Мои хобби:</h3>
+            <ul>
+                <li>Сноуборд</li>
+                <li>Программирование</li>
+                <li>Походы</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

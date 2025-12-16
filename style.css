@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: #222;
+    color: #fff;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+body.dark .profile-card {
+    background: #333;
+    color: #fff;
+}
+
+#avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #f2b7e9;
+}
+
+.hidden {
+    display: none;
+}
+
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #f2b7e9;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #f2b7e9;
+}
+
+body.dark button {
+    background: #f2b7e9;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+body.dark input {
+    background: #555;
+    color: #fff;
+    border-color: #777;
+}
+
+
+#hobbies {
+    text-align: left;
+}
