@@ -20,6 +20,11 @@ header, main, footer {
     margin-bottom: 20px;
 }
 
+.logo {
+    width: 80px;    
+    height: auto;
+}
+
 .menu-nav ul {
     list-style: none;
     padding: 0;
