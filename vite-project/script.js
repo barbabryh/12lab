@@ -1,4 +1,3 @@
-// Кнопки "Добавить/Удалить"
 const addButtons = document.querySelectorAll('.add-btn');
 const totalElem = document.getElementById('total');
 let totalSum = 0;
